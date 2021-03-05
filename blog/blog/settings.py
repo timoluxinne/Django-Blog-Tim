@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'i#!yg0vr#i7h0oo2=o)0%4t2zx93#f5g2azgo7qh4_%r#-cm35'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['django-tim.herokuapp.com', '127.0.0.1']
 
