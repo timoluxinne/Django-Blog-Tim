@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="card card-body">
+      <form method="POST">
+          {% csrf_token %}
+          <fieldset>
+              <legend class="border-bottom text-primary text-center">Join Us Today</legend>
+              {{form|crispy}}
+          </fieldset>
+          <button class="btn btn-block btn-info">Register</button>
+      </form>
+      <small class="text-muted mt-3">
+        Already have an account? <a href="" class="card-link">Sign In</a>
+      </small>
+  </div>
+{% endblock content %}

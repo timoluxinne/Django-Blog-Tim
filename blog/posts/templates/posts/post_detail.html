@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+
+<article class="card card-body mb-3 shadow">
+    <div class="row row-cols-2">
+        <div class="col-2">
+            <img src="{{post.author.profile.image.url}}" alt="" width="60px" height="60px" class="rounded-circle">
+        </div>
+        <div class="col-10 pl-0">
+            <div class="d-flex">
+                <a href="" class="card-link font-weight-bold">{{post.author}}</a>
+                <span class="text-muted ml-4">{{post.date_created}}</span>
+            </div>
+            <hr class="my-2">
+            <a href="{% url 'post_update' object.id %}" class="btn btn-sm btn-info">Update</a>
+            <a href="{% url 'post_delete' object.id %}" class="btn btn-sm btn-danger">Delete</a>
+            <h4 class="card-title">{{post.title}}</h4>
+            <p class="card-text">{{post.content}}</p>
+        </div>
+    </div>
+</article>
+
+{% endblock content %}

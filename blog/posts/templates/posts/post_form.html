@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="card card-body">
+      <form method="POST">
+          {% csrf_token %}
+          <fieldset>
+              <legend class="border-bottom text-primary text-center">Post</legend>
+              {{form|crispy}}
+          </fieldset>
+          <button class="btn btn-block btn-info">Post</button>
+      </form>
+  </div>
+{% endblock content %}

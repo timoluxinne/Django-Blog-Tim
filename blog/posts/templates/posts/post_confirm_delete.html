@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="card card-body">
+      <form method="POST">
+          {% csrf_token %}
+          Are you sure you want to delete "{{object.title}}"?
+          <button class="btn btn-block btn-info">Yes, Confirm</button>
+          <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+      </form>
+      <small class="text-muted mt-3">
+        Already have an account? <a href="" class="card-link">Sign In</a>
+      </small>
+  </div>
+{% endblock content %}
